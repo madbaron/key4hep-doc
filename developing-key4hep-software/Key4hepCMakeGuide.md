@@ -27,7 +27,9 @@ Developers may also look into `spack` to have more fine-grained control over the
 
 * Create a build directory: `mkdir build; cd build`
 * Run CMake in the build directory: `cmake .. `
-* Change any cmake options by rerunning cmake. For example: `cmake .. -DCMAKE_INSTALL_PREFIX=../install -DCMAKE_BUILD_TYPE=Debug`. Tools like ccmake may also be useful: `ccmake ..`
+* Change any cmake options by rerunning cmake.\
+  For example: `cmake .. -DCMAKE_INSTALL_PREFIX=../install -DCMAKE_BUILD_TYPE=Debug`.\
+  Tools like ccmake may also be useful: `ccmake ..`
 * Compile the software, using all the cpus available:    ```make -j `getconf _NPROCESSORS_ONLN` ```  
 * Install by running `make install`
 * In case any dependency is changed, most likely you need to remove all the contents of the build folder and rerun cmake and the compilation.
