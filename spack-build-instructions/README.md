@@ -47,6 +47,8 @@ spack load key4hep-stack
 
 Alternatively, and for other platforms, spack can be configured in a few steps. These steps are essentially what is used to create the pre-configured spack instance in this script: https://github.com/key4hep/key4hep-spack/blob/master/scripts/ci_setup_spack.sh
 
+While this still puts the configuration files in the global scope of spack, it is recommended to use them in an environment, as provided by key4hep-spack.
+
 #### Installing Spack
 Spack itself is very easy to install -  simply clone the repository with git.
 
@@ -66,12 +68,13 @@ spack repo add key4hep-spack
 
 ### Configuring `packages.yaml`
 
-In order to choose the right package versions and build options, spack sometimes needs a few [hints and nudges](https://spack.readthedocs.io/en/latest/build_settings.html).
+In order to choose the right package versions and build options, spack sometimes needs a few [hints and nudges](https://spack.readthedocs.io/en/latest/build_settings.html). With the new concretizer (default as of spack version 0.17) this should be mostly obsolete.
 key4hep-spack ships a spack config file that should give a good build customization out of the box, but can also be customized further. It just needs to be copied to the configuration where spack searches for configurations:
 
 ```
-cp key4hep-spack/config/packages.yaml spack/etc/spack/
+cp key4hep-spack/environments/key4hep-common/packages.yaml spack/etc/spack/
 ```
+
 
 
 #### Configuring `upstreams.yaml`
