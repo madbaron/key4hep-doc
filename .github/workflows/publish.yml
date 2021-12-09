@@ -1,7 +1,14 @@
 
 name: publish
 
-on: [push]
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * *' # end of every day
+
+
 
 jobs:
   test:
@@ -15,6 +22,7 @@ jobs:
         pip3 install -r requirements.txt
     - name: Sphinx build
       run: |
+        curl --fail --silent https://raw.githubusercontent.com/key4hep/k4MarlinWrapper/master/doc/starterkit/k4MarlinWrapperCLIC/Readme.md -o k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/Readme.md
         sphinx-build -M html . build
     - name: Publish gh-pages
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
