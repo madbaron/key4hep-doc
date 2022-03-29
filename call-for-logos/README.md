@@ -14,8 +14,8 @@ Logo 3
 
 Logo 4
 
-![](key4hep_logo4.svg)
+<img src="key4hep_logo4.svg" width="50%" height="50%">
 
 Logo 5
 
-![](key4hep_logo5.svg)
+<img src="key4hep_logo5.svg" width="50%" height="50%">
