@@ -12,3 +12,10 @@ Logo 3
 
 ![](key4hep_logo3.png)
 
+Logo 4
+
+![](key4hep_logo4.svg)
+
+Logo 5
+
+![](key4hep_logo5.svg)
