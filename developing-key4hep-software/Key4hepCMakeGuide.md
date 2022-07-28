@@ -50,9 +50,9 @@ cd ../InstallArea
 * `export PATH=$PWD/bin/:$PATH`
   - in order to make any executables available on the command line
 * `export LD_LIBRARY_PATH=$PWD/lib:$PWD/lib64:$LD_LIBRARY_PATH`
-  - in order to make libraries available for linking and as for the plugin systems in Gaudi/DD4hep
+  - in order to make libraries available for linking and for the plugin systems in Gaudi/DD4hep
 * `export PYTHONPATH=$PWD/python:$PYTHONPATH`
-  - in order to make libraries available for linking and as for the plugin systems in Gaudi/DD4hep
+  - in order to make libraries available for linking and for the plugin systems in Gaudi/DD4hep
 * `export ROOT_INCLUDE_PATH=$PWD/include:$ROOT_INCLUDE_PATH`
   - in case the package builds ROOT dictionaries
 * `export <PACKAGENAME>=$PWD/share/<PackageName>`
