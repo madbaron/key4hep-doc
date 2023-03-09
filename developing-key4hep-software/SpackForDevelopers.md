@@ -5,6 +5,10 @@ However, it is not impossible and this is an area of spack that is currently und
 Unfortunately, this also means that the spack documentation might not be fully up-to-date on these topics.
 Hence, this page tries to collect some of the experiences the Key4hep developers have made.
 
+```{tip} 
+To obtain and setup `spack` take a look at {doc}`/spack-build-instructions-for-librarians/spack-setup`.
+```
+
 ## Developing a single package
 
 When only developing on a single package it is possible to use the [`dev-build`](https://spack.readthedocs.io/en/latest/command_index.html#spack-dev-build) command of spack.
