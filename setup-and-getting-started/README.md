@@ -1,23 +1,36 @@
-
-
 # Getting started with Key4hep software
 
 ## Setting up the Key4hep Software Stack
 
-### Using central installations on cvmfs
+### Using a central installation on cvmfs
 
-The following command will set up the pre-installed software on lxplus (or any centos7 machine with cvmfs):
+Two builds with the key4hep stack are distributed on cvmfs. The releases happen
+every few months on demand (for example, if there is a new important feature or
+a breaking change) and at the moment only CentOS 7 is supported (support for
+AlmaLinux 9 and Ubuntu is coming soon). Run the following to set up the stack:
 
 ```bash
-
 source /cvmfs/sw.hsf.org/key4hep/setup.sh
 ```
 
+In addition, nightly builds for CentOS 7, AlmaLinux 9 and Ubuntu 22.04 with the
+latest version of many packages are available:
 
+```bash
+source /cvmfs/sw-nightlies.hsf.org/key4hep/setup.sh
+```
+
+The `setup.sh` script always points to the latest build and it will change
+without warning. However, after sourcing the script some information will be
+displayed with instructions on how to reproduce the current environment. Nightly
+builds are intended for development and testing and they will be deleted after
+some time from `/cvmfs`.
 
 ### Using Virtual Machines or Docker containers
 
-The instructions above should work in any CentOS7 virtual machine or Docker container with `cvmfs` available. We give in the following one example for each of the two cases.
+The instructions above should work on any virtual machine or Docker container
+with `cvmfs` available. We give in the following one example for each of the two
+cases.
 
 #### CernVM Virtual Appliance
 
@@ -72,5 +85,3 @@ k4huser@localhost's password:
 Graphics should of course work well if you choose to work in the VirtualBox window.
 
 The `cernvm-launch` also supports listing, stopping, starting virtual machines. Please run `cernvm-launch -h` for all the available options.
-
-
