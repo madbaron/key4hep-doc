@@ -1,6 +1,5 @@
 # Github workflow and contribution guide
 
-
 ## Overview
 
 This page should allow users that are new to Git to get started with Key4hep software, and describes the workflow for accessing and contributing code.
@@ -17,11 +16,14 @@ Please refer to [this tutorial](https://git-scm.com/book/en/v2/Getting-Started-F
 
 ## Generate and set up ssh keys for github
 
-When working on lxplus we recommend to clone github repositories via SSH, especially if you want to contribute code. For this to work, you need to generate ssh keys for authentication. See the corresponding github [help-page](https://help.github.com/articles/generating-an-ssh-key/).
+We recommend to clone github repositories via SSH, especially if you want to
+contribute code. For this to work, you need to generate ssh keys for
+authentication. See the corresponding github
+[help-page](https://help.github.com/articles/generating-an-ssh-key/).
 
 {% callout "Generate and set up ssh keys for github" %}
 
- If you only want to use the software it may be easier to use https. In that case you don't need to generate the keys but have to replace `git@github:` with `https://github.com/` in all the instructions. Note that you'll not be able to push to your repository when you are on lxplus. You can also start using https for now and later re-add your repository with ssh authentication, see the [trouble shooting section](#trouble-shooting)
+ If you only want to use the software it may be easier to use https. In that case you don't need to generate the keys but have to replace `git@github:` with `https://github.com/` in all the instructions. Note that you'll not be able to push to your repository when you are on lxplus. You can also start using https for now and later re-add your repository with ssh authentication, see the [trouble shooting section](#trouble-shooting).
 
 {% endcallout %}
 
@@ -188,4 +190,4 @@ In case you have any questions on this guide, or need help to sort out
 an issue with a repository, feel free to drop a mail to
 key4hep-sw at CERN, and we'll be happy to help you.
 Alternatively create an issue in the [bug tracker](https://github.com/key4hep)
-![smile](https://twiki.cern.ch/twiki/pub/TWiki/SmiliesPlugin/smile.gif "smile")
+![smile](https://twiki.cern.ch/twiki/pub/TWiki/SmiliesPlugin/smile.gif "smile").
