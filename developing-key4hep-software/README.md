@@ -13,4 +13,8 @@ Sooner rather than later you will find it necessary write code for Key4hep. Thes
     WritingAlgorithms.md
     SpackForDevelopers.md
 
+.. toctree::
+    :hidden:
+    CMakeBuild.md
+
 ```
