@@ -15,6 +15,8 @@ Sooner rather than later you will find it necessary write code for Key4hep. Thes
 
 .. toctree::
     :hidden:
+    :maxdepth: 1
+
     CMakeBuild.md
 
 ```
