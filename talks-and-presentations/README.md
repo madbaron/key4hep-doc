@@ -1,4 +1,3 @@
-
 # Talks and Presentations
 
 A Zotero group with the items listed below can be found [here](https://www.zotero.org/groups/2447672/key4hep-talksandpublications).
@@ -7,7 +6,7 @@ A Zotero group with the items listed below can be found [here](https://www.zoter
   Developer Tools & Packaging Working Group July 11, 20
   <https://indico.cern.ch/event/1301872/contributions/5474076/attachments/2682457/4653446/carceller_key4hep_spack_2023.pdf>
 
-* *Carceller, Juan Miguel*, presented at the CERN EP R&D: Software meeting, June
+* *Carceller, Juan Miguel*, **key4hep Update** presented at the CERN EP R&D: Software meeting, June
   21, 2023,
   <https://indico.cern.ch/event/1253565/contributions/5265910/attachments/2591081/4628747/carceller_key4hep_20230621.pdf>
 
@@ -42,13 +41,3 @@ A Zotero group with the items listed below can be found [here](https://www.zoter
 * *Mato, Pere*. **“Key4HEP: The Common Turnkey Software Stack.”** presented at
   the CLICdp Collaboration Meeting, August 28, 2019.
   <https://indico.cern.ch/event/792656/contributions/3536473/attachments/1898480/3132881/Key4HEP_CLICdp_Meeting.pdf>.
-
-...
-
-## Upcoming Talks and Workshops
-
-
-
-...
-
-
