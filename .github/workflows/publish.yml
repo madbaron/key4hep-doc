@@ -31,7 +31,7 @@ jobs:
       run: |
         sphinx-build -M html . build
     - name: Publish gh-pages
-      if: ${{ github.ref == 'refs/heads/master' }}
+      if: ${{ github.ref == 'refs/heads/main' }}
       run: |
         cd build/html
         git init

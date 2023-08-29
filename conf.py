@@ -18,7 +18,7 @@ html_context = {
     'display_github': True,
     'github_user': 'key4hep',
     'github_repo': 'key4hep-doc',
-    'github_version': 'master',
+    'github_version': 'main',
     'conf_py_path': '/',
 }
 
