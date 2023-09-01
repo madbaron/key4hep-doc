@@ -76,7 +76,7 @@ The following packages have been built together successfully so it should be
 possible to build any combination of them:
 - podio
 - EDM4hep
-- k4FWCore (with https://github.com/key4hep/k4FWCore/pull/122)
+- k4FWCore
 - LCIO
 - ILCUTIL
 - LCCD
