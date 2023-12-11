@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setting up Spack &mdash; Key4hep  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/panels.css?v=69fd799d" />
+      <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/panels.js?v=0f4bdeea"></script>
+        <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Talks and Presentations" href="../talks-and-presentations/README.html" />
+    <link rel="prev" title="Building Key4hep: For Librarians" href="README.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Key4hep
+              <img src="../_static/starterkit.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../setup-and-getting-started/README.html">Getting started with Key4hep software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup-and-getting-started/README.html#setting-up-the-key4hep-software-stack">Setting up the Key4hep Software Stack</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../setup-and-getting-started/README.html#using-a-central-installation-on-cvmfs">Using a central installation on cvmfs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../how-tos/README.html">Key4hep How-Tos and Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html">EDM4hep - The common event data model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#important-resources">Important resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#doxygen-api-documentation">Doxygen API documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#the-overview-diagram">The overview diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#the-table-of-available-types">The table of available types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#navigating-the-doxygen-reference-page">Navigating the doxygen reference page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#some-utility-functionality">Some utility functionality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#podio-the-technical-infrastructure-on-which-things-run">podio - The technical infrastructure on which things run</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#podio-code-generation">podio code generation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#the-three-layers-of-podio">The three layers of podio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#basics-of-generated-code-value-semantics">Basics of generated code - value semantics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#guessing-the-interface-from-the-yaml-definition">Guessing the interface from the yaml definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#why-is-there-a-xyz-and-a-mutablexyx">Why is there a <code class="docutils literal notranslate"><span class="pre">XYZ</span></code> and a <code class="docutils literal notranslate"><span class="pre">MutableXYX</span></code>?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#writing-function-interfaces">Writing function interfaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#subset-collections">Subset collections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#the-podio-frame-container">The <code class="docutils literal notranslate"><span class="pre">podio::Frame</span></code> container</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#getting-collections-from-a-frame">Getting collections from a <code class="docutils literal notranslate"><span class="pre">Frame</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#putting-a-collection-into-a-frame">Putting a collection into a <code class="docutils literal notranslate"><span class="pre">Frame</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#reading-edm4hep-files">Reading EDM4hep files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#root-file-layout-of-podio-generated-edms">ROOT file layout of podio generated EDMs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#how-do-i-figure-out-if-a-file-is-legacy">How do I figure out if a file is legacy?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/key4hep-tutorials/edm4hep_analysis/edm4hep_api_intro.html#podio-dump"><code class="docutils literal notranslate"><span class="pre">podio-dump</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../how-tos/k4fwcore/doc/PodioInputOutput.html">Reading and writing EDM4hep files in Gaudi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4fwcore/doc/PodioInputOutput.html#the-k4datasvc">The <code class="docutils literal notranslate"><span class="pre">k4DataSvc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4fwcore/doc/PodioInputOutput.html#reading-events">Reading events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4fwcore/doc/PodioInputOutput.html#writing-events">Writing events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/k4fwcore/doc/PodioInputOutput.html#writing-only-a-subset-of-collections">Writing only a subset of collections</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../how-tos/k4fwcore/doc/k4run-args.html">Adding custom arguments to <code class="docutils literal notranslate"><span class="pre">k4run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-tos/k4marlinwrapper/doc/MarlinWrapperIntroduction.html">Wrapping Marlin processors in Gaudi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4marlinwrapper/doc/MarlinWrapperIntroduction.html#the-marlinprocessorwrapper-gaudi-algorithm">The <code class="docutils literal notranslate"><span class="pre">MarlinProcessorWrapper</span></code> Gaudi algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4marlinwrapper/doc/MarlinWrapperIntroduction.html#reading-and-writing-lcio-events-with-gaudi">Reading and writing LCIO events with Gaudi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4marlinwrapper/doc/MarlinWrapperIntroduction.html#automatic-conversion-of-marlin-xml-steering-files">Automatic conversion of Marlin XML steering files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/k4marlinwrapper/doc/MarlinWrapperIntroduction.html#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4marlinwrapper/doc/MarlinWrapperIntroduction.html#using-the-edm-converters">Using the EDM converters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/k4marlinwrapper/doc/MarlinWrapperIntroduction.html#configuration-options">Configuration options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html">Standalone conversion from LCIO to EDM4hep</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#patching-missing-collections-on-the-fly">Patching missing collections on the fly</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#example">Example:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#converting-lcrelation-collections">Converting <code class="docutils literal notranslate"><span class="pre">LCRelation</span></code> collections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#converting-only-a-subset-of-collections">Converting only a subset of collections</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#library-usage-of-the-conversion-functions">Library usage of the conversion functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#converting-collection-data">Converting collection (data)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#handling-relations">Handling relations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#handling-of-subset-collections">Handling of subset collections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#handling-of-lcrelations">Handling of <code class="docutils literal notranslate"><span class="pre">LCRelation</span></code>s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#converting-entire-events">Converting entire events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#converting-event-parameters">Converting Event parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#subtle-differences-between-lcio-and-edm4hep">Subtle differences between LCIO and EDM4hep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how-tos/k4edm4hep2lcioconv/doc/LCIO2EDM4hep.html#example-for-a-reconstructedparticle-collection">Example for a ReconstructedParticle Collection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/README.html">Key4hep Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/Readme.html">Using the Key4hep-Stack for CLIC Simulation and Reconstruction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/Readme.html#simulation">Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/Readme.html#reconstruction">Reconstruction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/Readme.html#reconstruction-with-marlin">Reconstruction with Marlin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/Readme.html#reconstruction-with-gaudi-through-k4marlinwrapper">Reconstruction with Gaudi through k4MarlinWrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/Readme.html#dd4hep-geometry-information">DD4hep Geometry Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/key4hep-tutorials/gaudi_ild_reco/README.html">Runing ILD simulation and reconstruction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/key4hep-tutorials/gaudi_ild_reco/README.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/key4hep-tutorials/gaudi_ild_reco/README.html#running-the-simulation">Running the simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/key4hep-tutorials/gaudi_ild_reco/README.html#reconstruction">Reconstruction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/key4hep-tutorials/gaudi_ild_reco/README.html#creating-a-gaudi-options-file">Creating a Gaudi options file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/key4hep-tutorials/gaudi_ild_reco/README.html#adapting-the-options-file-for-edm4hep">Adapting the options file for EDM4hep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/key4hep-tutorials/gaudi_ild_reco/README.html#running-the-reconstruction-with-k4run">Running the reconstruction with <code class="docutils literal notranslate"><span class="pre">k4run</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/howtoMultithread.html">How to run multithreading with k4MarlinWrapper (Gaudi)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/howtoMultithread.html#running-gaudi-with-multithreading-support">Running Gaudi with multithreading support</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/howtoMultithread.html#how-to-run-with-inter-event-parallelism">How to run with inter-event parallelism</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/howtoMultithread.html#running-example">Running example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/CEDViaWrapper.html">Running an Event Display with EDM4hep input</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/CEDViaWrapper.html#setting-up-an-environment">Setting up an environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/CEDViaWrapper.html#creating-an-input-file">Creating an input file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/CEDViaWrapper.html#running-the-event-display">Running the event display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4marlinwrapper/doc/starterkit/k4MarlinWrapperCLIC/CEDViaWrapper.html#creating-a-gaudi-options-file">Creating a Gaudi options file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/k4simdelphes/doc/starterkit/k4SimDelphes/Readme.html">Running Delphes fast simulation with EDM4hep output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4simdelphes/doc/starterkit/k4SimDelphes/Readme.html#setup-and-prerequisites">Setup and prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4simdelphes/doc/starterkit/k4SimDelphes/Readme.html#standalone-executables">Standalone executables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/k4simdelphes/doc/starterkit/k4SimDelphes/Readme.html#other-standalone-executables">Other standalone executables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/k4simdelphes/doc/starterkit/k4SimDelphes/Readme.html#usage-in-the-key4hep-framework">Usage in the Key4hep framework</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developing-key4hep-software/README.html">Developing Key4hep</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html">Github workflow and contribution guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#first-time-setup-of-git">First time setup of git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#generate-and-set-up-ssh-keys-for-github">Generate and set up ssh keys for github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#improving-your-git-experience">Improving your git experience</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#development-workflow">Development workflow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#keeping-your-local-repository-up-to-date">Keeping your local repository up to date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#contributing-code">Contributing code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#recommendations">Recommendations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#general-recommendations">General recommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#commit-comments">Commit comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#cleaning-history">Cleaning history</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#pull-requests">Pull requests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#trouble-shooting">Trouble-shooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#when-i-try-to-push-to-the-repository-i-get-an-authentication-error">When I try to push to the repository, I get an authentication error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#i-have-cloned-with-https-and-now-i-can-t-push-my-changes-what-do-i-do">I have cloned with https and now I can’t push my changes, what do I do?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepSoftwareGit.html#need-help">Need help?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html">CMake guide for Key4hep software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#quick-start-into-building-key4hep-software">Quick start into building Key4hep Software</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#set-up-the-environment">Set up the environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#running-cmake">Running CMake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#using-your-local-installation">Using your local installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#cmake-example-packages">CMake example packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#changing-the-cmake-configuration">Changing the CMake Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#runtime-environment">Runtime Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#ctest-in-key4hep">CTest in Key4hep</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/Key4hepCMakeGuide.html#customizing-how-cmake-is-run">Customizing how CMake is run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developing-key4hep-software/SinglePackage.html">Developing a single package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html">Building Key4hep using Spack: For Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html#spack-set-up">Spack set up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html#developing-a-single-package">Developing a single package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html#installing-a-local-version-with-dev-build">Installing a local version with <code class="docutils literal notranslate"><span class="pre">dev-build</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html#using-the-local-version-as-dependency">Using the local version as dependency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html#more-advanced-usage">More advanced usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html#developing-multiple-packages-or-dependencies-of-other-packages">Developing multiple packages or dependencies of other packages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html#using-an-environment-to-setup-all-dependencies">Using an environment to setup all dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../developing-key4hep-software/SpackForDevelopers.html#environments-and-a-development-workflow">Environments and a development workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html">Writing Gaudi Algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html#gaudi">Gaudi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html#gaudi-functional">Gaudi::Functional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html#walkthrough-of-functional-algorithms">Walkthrough of Functional Algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html#the-steering-file">The steering file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html#initialize-and-finalize">Initialize and finalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html#debugging-how-to-use-gdb">Debugging: How to use GDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developing-key4hep-software/WritingAlgorithms.html#avoiding-const-in-operator">Avoiding const in <code class="docutils literal notranslate"><span class="pre">operator()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="README.html">Building Key4hep: For Librarians</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Setting up Spack</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-a-spack-instance">Downloading a spack instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-spack-environments">Using Spack Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-key4hep-release-user-environment">Using the key4hep-release-user environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-spack">Configuring Spack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installing-spack">Installing Spack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installing-the-key4hep-package-recipes">Installing the key4hep package recipes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-packages-yaml">Configuring <code class="docutils literal notranslate"><span class="pre">packages.yaml</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuring-upstreams-yaml">Configuring <code class="docutils literal notranslate"><span class="pre">upstreams.yaml</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-additional-compilers">Setting up additional compilers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../talks-and-presentations/README.html">Talks and Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../call-for-logos/README.html">Call for logos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CONTRIBUTING.html#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../CONDUCT.html">Contributor Code of Conduct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../LICENSE.html">Software</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">External links:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://cern.ch/fccsw">FCC software</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://twiki.cern.ch/twiki/bin/view/CLIC/CLICSoftwareComputing">CLIC software</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ilcsoft.desy.de/portal">ILC software</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://cepcsoft.ihep.ac.cn/">CEPC software</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Key4hep</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="README.html">Building Key4hep: For Librarians</a></li>
+      <li class="breadcrumb-item active">Setting up Spack</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/key4hep/key4hep-doc/blob/main/spack-build-instructions-for-librarians/spack-setup.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setting-up-spack">
+<h1>Setting up Spack<a class="headerlink" href="#setting-up-spack" title="Link to this heading"></a></h1>
+<section id="downloading-a-spack-instance">
+<h2>Downloading a spack instance<a class="headerlink" href="#downloading-a-spack-instance" title="Link to this heading"></a></h2>
+<p>Spack is easy to set up: simply clone the key4hep fork, and use one of the provided spack “environments”, that is spack configuration that is created automatically from the current key4hep/key4hep-spack repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spack/spack
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/key4hep/key4hep-spack
+<span class="nb">source</span><span class="w"> </span>spack/share/spack/setup-env.sh
+<span class="nb">source</span><span class="w"> </span>key4hep-spack/environments/key4hep-release-user/setup_clingo_centos7.sh<span class="w"> </span><span class="c1"># NOTE: only needed on centos7</span>
+spack<span class="w"> </span>env<span class="w"> </span>activate<span class="w"> </span>key4hep-spack/environments/key4hep-release-user<span class="w"> </span><span class="c1"># or other environment, see below</span>
+</pre></div>
+</div>
+<p>These instructions assume that a Centos7 machine with a running CVMFS client is used (for other OSs see below). Since Spack cannot bootstrap with the system compiler on Centos7, a setup script for Clingo ( a spack dependency ) is provided.</p>
+</section>
+<section id="using-spack-environments">
+<h2>Using Spack Environments<a class="headerlink" href="#using-spack-environments" title="Link to this heading"></a></h2>
+<p>The  <a class="reference external" href="https://spack.readthedocs.io/en/latest/environments.html">spack environments</a> available in <code class="docutils literal notranslate"><span class="pre">key4hep-spack/environments</span></code> bundle the spack configuration, setting up a suitable compiler from cvmfs, the key4hep package recipes, whether to create a view, etc. It is recommended to always use spack in an environment. New environments can be easily created by copying and modifying existing ones, but some use relative links to common configuration files in <code class="docutils literal notranslate"><span class="pre">key4hep-spack/environments/key4hep-common</span></code>, so they should be kept in the <code class="docutils literal notranslate"><span class="pre">key4hep/environments</span></code> directory.</p>
+<p>The basic environment is <code class="docutils literal notranslate"><span class="pre">key4hep-release</span></code>, which is used for the central installations and therefore uses <code class="docutils literal notranslate"><span class="pre">/cvmfs</span></code> as install area. <code class="docutils literal notranslate"><span class="pre">key4hep-debug</span></code> is a variation for debug builds. The default compiler is gcc, but an environment that uses clang is provided under <code class="docutils literal notranslate"><span class="pre">key4hep-release-clang</span></code>.
+For local builds that use cvmfs read-only, <code class="docutils literal notranslate"><span class="pre">key4hep-release-user</span></code> can be used.</p>
+</section>
+<section id="using-the-key4hep-release-user-environment">
+<h2>Using the key4hep-release-user environment<a class="headerlink" href="#using-the-key4hep-release-user-environment" title="Link to this heading"></a></h2>
+<p>The key4hep user environment has the <code class="docutils literal notranslate"><span class="pre">key4hep-stack</span></code> bundle package in its spec list. By concretizing it, spack selects the latest compatible versions, re-using installations from cvmfs</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>concretize<span class="w"> </span>-f
+spack<span class="w"> </span>find<span class="w"> </span><span class="c1"># lists the available concretized packages</span>
+</pre></div>
+</div>
+<p>The environment can be installed as is, although this will just install the bundle packages. However, this will create a setup script that can be used to load the software.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>spack install
+</pre></div>
+</div>
+<p>Custom builds can now be realized, by adding specs to the environment and concretizing together. For example, to build the stack with a local version of EDM4hep:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>spack add edm4hep@master
+git clone https://github.com/key4hep/edm4hep
+# make some local changes to edm4hep
+spack develop -p $PWD/edm4hep edm4hep@master
+spack concretize -f
+spack install
+
+</pre></div>
+</div>
+</section>
+<section id="configuring-spack">
+<h2>Configuring Spack<a class="headerlink" href="#configuring-spack" title="Link to this heading"></a></h2>
+<p>Alternatively, and for other platforms, spack can be configured in a few steps. These steps are essentially what is used to create the pre-configured spack instance in this script: https://github.com/key4hep/key4hep-spack/blob/master/scripts/ci_setup_spack.sh</p>
+<p>While this still puts the configuration files in the global scope of spack, it is recommended to use them in an environment, as provided by key4hep-spack.</p>
+<section id="installing-spack">
+<h3>Installing Spack<a class="headerlink" href="#installing-spack" title="Link to this heading"></a></h3>
+<p>Spack itself is very easy to install -  simply clone the repository with git.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spack/spack.git
+<span class="nb">source</span><span class="w"> </span>spack/share/spack/setup-env.sh
+</pre></div>
+</div>
+</section>
+<section id="installing-the-key4hep-package-recipes">
+<h3>Installing the key4hep package recipes<a class="headerlink" href="#installing-the-key4hep-package-recipes" title="Link to this heading"></a></h3>
+<p>The spack repository for key4hep packages is installed the same way:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/key4hep/key4hep-spack.git
+spack repo add key4hep-spack
+</pre></div>
+</div>
+</section>
+</section>
+<section id="configuring-packages-yaml">
+<h2>Configuring <code class="docutils literal notranslate"><span class="pre">packages.yaml</span></code><a class="headerlink" href="#configuring-packages-yaml" title="Link to this heading"></a></h2>
+<p>In order to choose the right package versions and build options, spack sometimes needs a few <a class="reference external" href="https://spack.readthedocs.io/en/latest/build_settings.html">hints and nudges</a>. With the new concretizer (default as of spack version 0.17) this should be mostly obsolete.
+key4hep-spack ships a spack config file that should give a good build customization out of the box, but can also be customized further. It just needs to be copied to the configuration where spack searches for configurations:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cp key4hep-spack/environments/key4hep-common/packages.yaml spack/etc/spack/
+</pre></div>
+</div>
+<section id="configuring-upstreams-yaml">
+<h3>Configuring <code class="docutils literal notranslate"><span class="pre">upstreams.yaml</span></code><a class="headerlink" href="#configuring-upstreams-yaml" title="Link to this heading"></a></h3>
+<p>The cvmfs installation can be used as an “upstream installation”, by adding the following configuration:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span><span class="s">&lt;&lt;EOT &gt;&gt; spack/etc/spack/upstreams.yaml</span>
+<span class="s">upstreams:</span>
+<span class="s">  spack-instance-1:</span>
+<span class="s">      install_tree: /cvmfs/sw.hsf.org/spackages6/</span>
+<span class="s">EOT</span>
+</pre></div>
+</div>
+</section>
+<section id="setting-up-additional-compilers">
+<h3>Setting up additional compilers<a class="headerlink" href="#setting-up-additional-compilers" title="Link to this heading"></a></h3>
+<p>Often it is practical to use a compiler already installed upstream. Spack provides the <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">compiler</span> <span class="pre">find</span></code> command for this, but the compiler needs to be loaded into the PATH:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># loading the compiler from upstream</span>
+<span class="nb">source</span><span class="w"> </span>/cvmfs/sft.cern.ch/lcg/contrib/gcc/11.2.0/x86_64-centos7/setup.sh
+spack<span class="w"> </span>compiler<span class="w"> </span>find<span class="w"> </span>--scope<span class="w"> </span>site
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="README.html" class="btn btn-neutral float-left" title="Building Key4hep: For Librarians" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../talks-and-presentations/README.html" class="btn btn-neutral float-right" title="Talks and Presentations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Key4hep.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
