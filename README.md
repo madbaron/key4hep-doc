@@ -25,5 +25,6 @@
     CLIC software <https://twiki.cern.ch/twiki/bin/view/CLIC/CLICSoftwareComputing>
     ILC software <https://ilcsoft.desy.de/portal>
     CEPC software <http://cepcsoft.ihep.ac.cn/>
+    Muon Collider software <https://mcdwiki.docs.cern.ch/tutorials/cern2023/setup/>
 ```
 
